@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="518.0" prefWidth="620.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bookshelf_client.controllers.SendShareController">
+   <children>
+      <Label layoutX="219.0" layoutY="14.0" text="Запрос на чтение">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="59.0" text="Книга:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="560.0" layoutY="-1.0" maxHeight="64.0" maxWidth="85.0" minHeight="30.0" minWidth="33.0" onAction="#buttonClick_closeWindow" prefHeight="60.0" prefWidth="60.0" styleClass="my-button" stylesheets="@../css/button.css" text=" " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </JFXButton>
+      <JFXTextArea fx:id="commentsField" layoutX="54.0" layoutY="194.0" prefHeight="103.0" prefWidth="513.0" promptText="Введите комментарий здесь" style="-fx-background-color: #DFDFDA;" wrapText="true">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </JFXTextArea>
+      <Label layoutX="56.0" layoutY="167.0" text="Комментарий:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="temporaryRadioButton" layoutX="175.0" layoutY="330.0" selected="true" stylesheets="@../css/togglebutton.css" text="Временно">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toDate" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="permanentlyRadioButton" layoutX="334.0" layoutY="330.0" stylesheets="@../css/togglebutton.css" text="Бессрочно" toggleGroup="$toDate">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <DatePicker fx:id="dateEndDatePicker" layoutX="194.0" layoutY="386.0" style="-fx-font-size: 16;" stylesheets="@../css/datepicker.css" />
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="219.0" layoutY="454.0" prefHeight="39.0" prefWidth="184.0" style="-fx-background-color: #B2FF4C;" text="Отправить запрос" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="iconImage" fitHeight="67.0" fitWidth="70.0" layoutX="56.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" styleClass="css\datepicker.css" />
+      <Label fx:id="titleLabel" layoutX="135.0" layoutY="87.0" prefHeight="20.0" prefWidth="189.0" text="Title">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="authorLabel" layoutX="135.0" layoutY="111.0" prefHeight="20.0" prefWidth="189.0" text="Author">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="genreLabel" layoutX="135.0" layoutY="135.0" prefHeight="20.0" prefWidth="189.0" text="Genre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

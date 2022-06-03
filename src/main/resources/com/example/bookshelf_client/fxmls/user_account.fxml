@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="592.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bookshelf_client.controllers.UserAccountController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="600.0" style="-fx-background-color: #B2FF4C;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="searchButton" buttonType="RAISED" layoutX="411.0" layoutY="13.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#buttonClick_doSearch" prefHeight="37.0" prefWidth="35.0" style="-fx-background-color: #4BDDFF;" text=" ">
+               <font>
+                  <Font size="7.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="bookTitleSearchTextField" layoutX="227.0" layoutY="11.0" prefHeight="37.0" prefWidth="184.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="549.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#buttonClick_doOpenUser" prefHeight="37.0" prefWidth="35.0" style="-fx-background-color: #4BDDFF;" text=" " textAlignment="CENTER" AnchorPane.rightAnchor="16.0">
+               <font>
+                  <Font size="4.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" style="fx-background_color: #4BDDFF;">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="57.0" fitWidth="51.0" layoutX="14.0" layoutY="4.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon_bookshelf.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="73.0" layoutY="16.0" text="BookShelf" wrapText="true">
+               <font>
+                  <Font name="Lucida Sans Regular" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXListView fx:id="shelvesListView" layoutY="61.0" prefHeight="155.0" prefWidth="214.0" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="61.0" />
+      <JFXListView fx:id="booksListView" layoutX="226.0" layoutY="61.0" prefHeight="336.0" prefWidth="371.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="61.0" />
+      <AnchorPane blendMode="DARKEN" disable="true" prefHeight="400.0" prefWidth="600.0" styleClass="pane" stylesheets="@../css/blur.css" visible="false">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Blend mode="OVERLAY">
+               <topInput>
+                  <GaussianBlur radius="30.77">
+                     <input>
+                        <MotionBlur angle="267.91" radius="59.08" />
+                     </input>
+                  </GaussianBlur>
+               </topInput>
+            </Blend>
+         </effect>
+      </AnchorPane>
+      <JFXButton fx:id="newShelfButton" alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="223.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#buttonClick_doAddNewShelf" prefHeight="37.0" prefWidth="214.0" style="-fx-background-color: #4BDDFF;" text="Создать полку" AnchorPane.bottomAnchor="140.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="27.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="newBookButton" alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="269.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#buttonClick_doAddNewBook" prefHeight="37.0" prefWidth="214.0" style="-fx-background-color: #4BDDFF;" text="Добавить книгу" AnchorPane.bottomAnchor="94.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="27.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="sharedBooksButton" alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="319.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#buttonClick_openSharedBooks" prefHeight="37.0" prefWidth="214.0" style="-fx-background-color: #4BDDFF;" text="Полученные книги" AnchorPane.bottomAnchor="44.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="27.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/share.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <VBox fx:id="userActionsVBox" layoutX="768.0" layoutY="61.0" prefHeight="108.0" prefWidth="239.0" visible="false" AnchorPane.rightAnchor="14.0">
+         <children>
+            <JFXButton fx:id="mySharesButton" buttonType="RAISED" onAction="#buttonClick_myShares" prefHeight="37.0" prefWidth="244.0" text="Мои запросы">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#buttonClick_usersShares" prefHeight="37.0" prefWidth="260.0" text="Запросы от пользователей">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#buttonClick_logout" prefHeight="37.0" prefWidth="260.0" text="Выход">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <SubScene fx:id="content" height="400.0" layoutX="251.0" layoutY="226.0" visible="false" width="600.0" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="226.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+   </children>
+</AnchorPane>

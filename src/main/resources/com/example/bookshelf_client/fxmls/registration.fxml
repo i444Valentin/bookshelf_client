@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="487.0" prefWidth="600.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bookshelf_client.controllers.RegistrationController">
+   <children>
+      <Label layoutX="228.0" layoutY="14.0" prefHeight="25.0" prefWidth="145.0" text="Создание аккаунта">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="usernameTextField" focusColor="#10b9e8" layoutX="34.0" layoutY="74.0" prefHeight="25.0" prefWidth="210.0" promptText="Имя пользователя">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="emailTextField" focusColor="#10b9e8" layoutX="34.0" layoutY="153.0" prefHeight="25.0" prefWidth="210.0" promptText="email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+<!--      <DatePicker fx:id="birthDateDatePicker" cache="true" cacheHint="QUALITY"  depthTest="DISABLE" layoutX="11.0" layoutY="233.0" pickOnBounds="false" promptText="Дата рождения" style="-fx-font-size: 16;" />-->
+      <JFXTextField fx:id="countryTextField" focusColor="#10b9e8" layoutX="31.0" layoutY="305.0" prefHeight="25.0" prefWidth="210.0" promptText="Cтрана">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="passwordTextField" layoutX="357.0" layoutY="74.0" prefHeight="37.0" prefWidth="210.0" promptText="Пароль">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="confirmPasswordTextField" layoutX="357.0" layoutY="153.0" prefHeight="37.0" prefWidth="210.0" promptText="Подтверждение пароля">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="captchaTextField" focusColor="#10b9e8" layoutX="357.0" layoutY="305.0" prefHeight="25.0" prefWidth="210.0" promptText="Введите символы с картинки">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="49.0" fitWidth="210.0" layoutX="359.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/captcha.png" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="408.0" onAction="#buttonClick_createAccount" ripplerFill="#0cbdee" style="-fx-background-color: #4BDDFF;" text="Создать аккаунт">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="birthDateDatePicker" layoutX="34.0" layoutY="239.0" prefHeight="37.0" prefWidth="210.0" promptText="Дата рождения" style="-fx-font-size: 16;" stylesheets="@../css/datepicker.css" />
+   </children>
+</AnchorPane>

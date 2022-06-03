@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bookshelf_client.controllers.AcceptShareController">
+   <children>
+      <Label layoutX="237.0" layoutY="15.0" text="Принять запрос">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="55.0" text="Книга:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="200.0" text="Комментарий:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="307.0" text="Дата окончания:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="commentLabel" alignment="TOP_LEFT" layoutX="57.0" layoutY="231.0" prefHeight="76.0" prefWidth="486.0" text="comment..." wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="540.0" maxHeight="64.0" maxWidth="85.0" minHeight="30.0" minWidth="33.0" onAction="#buttonClick_closeWindow" prefHeight="60.0" prefWidth="60.0" styleClass="my-button" stylesheets="@../css/button.css" text=" " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="237.0" layoutY="346.0" onAction="#buttonClick_acceptBook" prefHeight="37.0" prefWidth="147.0" style="-fx-background-color: #B2FF4C;" text="Принять">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="dateEndLabel" layoutX="189.0" layoutY="307.0" prefHeight="17.0" prefWidth="96.0" text="00.00.0000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="163.0" text="Пользователь:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="173.0" layoutY="163.0" text="username">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="iconImage" fitHeight="67.0" fitWidth="70.0" layoutX="54.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="titleLabel" layoutX="141.0" layoutY="88.0" prefHeight="20.0" prefWidth="189.0" text="Title">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="authorLabel" layoutX="141.0" layoutY="110.0" prefHeight="20.0" prefWidth="189.0" text="Author">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="genreLabel" layoutX="141.0" layoutY="135.0" prefHeight="20.0" prefWidth="189.0" text="Genre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

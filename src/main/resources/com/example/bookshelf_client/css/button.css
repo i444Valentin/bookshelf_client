@@ -1,0 +1,19 @@
+.my-button {
+    -fx-graphic: url("../images/close32.png");
+    -fx-background-size: 64px;
+}
+
+.add-book-on-shelf {
+    -fx-graphic: url("../images/plus2_24.png");
+    -fx-background-size: 64px;
+}
+
+.read-book {
+    -fx-graphic: url("../images/read_book32.png");
+    -fx-background-size: 64px;
+}
+
+.my-button:hover {
+    -fx-effect: dropshadow( gaussian , #B4BBAA , 1 , 1 , 1 , 1 );
+    -fx-background-color: #B4BBAA;
+}

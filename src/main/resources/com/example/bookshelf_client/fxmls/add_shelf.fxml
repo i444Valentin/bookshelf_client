@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="240.0" prefWidth="426.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bookshelf_client.controllers.AddShelfController">
+   <children>
+      <Label layoutX="140.0" layoutY="12.0" text="Добавить полку">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="shelfNameTextField" layoutX="67.0" layoutY="83.0" prefHeight="37.0" prefWidth="293.0" promptText="Имя полки">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="140.0" layoutY="182.0" onAction="#buttonClick_addShelf" prefHeight="37.0" prefWidth="147.0" style="-fx-background-color: #B2FF4C;" text="ОК">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="366.0" layoutY="-3.0" maxHeight="64.0" maxWidth="85.0" minHeight="30.0" minWidth="33.0" prefHeight="60.0" prefWidth="60.0" styleClass="my-button" stylesheets="@../css/button.css" text=" " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="1.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
