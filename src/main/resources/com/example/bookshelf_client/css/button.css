@@ -13,6 +13,11 @@
     -fx-background-size: 64px;
 }
 
+.go-back {
+    -fx-graphic: url("../images/arrow_b32.png");
+    -fx-background-size: 64px;
+}
+
 .my-button:hover {
     -fx-effect: dropshadow( gaussian , #B4BBAA , 1 , 1 , 1 , 1 );
     -fx-background-color: #B4BBAA;
